@@ -14,6 +14,48 @@
  *= require_self
  */
 
-.red {
-  color: red;
+.calendar {
+  border-collapse: collapse;
+  width: 90%;
+  height: auto;
+  margin: 5%;
+}
+.calendar th {
+  color: #000;
+  text-align: center;
+  padding: 1%;
+  width: 14.29%
+}
+.calendar td {
+  padding: 6px;
+}
+
+td, th {
+  font-family: "Lucida Grande", arial, helvetica, sans-serif;
+  font-size: 1vw;
+  border: 1px solid #DDDDDD;
+}
+
+td {
+  color: #777;
+  height: 80px;
+  vertical-align: top;
+  font-size: 16px;
+}
+.notmonth {
+  background-color: #DDDDDD;
+}
+.today {
+  background-color: #FFFFCE;
+}
+#month {
+  margin: 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+  a {
+    text-decoration: none;
+    padding: 0 10px;
+    color: #999;
+  }
 }

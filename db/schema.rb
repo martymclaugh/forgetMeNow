@@ -18,6 +18,7 @@ ActiveRecord::Schema.define(version: 20161004185807) do
   create_table "reminders", force: :cascade do |t|
     t.string   "date"
     t.integer  "user_id"
+    t.string   "title"
     t.string   "message"
     t.string   "time"
     t.datetime "created_at", null: false

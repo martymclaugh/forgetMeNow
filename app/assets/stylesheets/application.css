@@ -63,7 +63,15 @@ td {
 }
 
 .new-reminder {
-  margin-left: 26%
+  margin-left: 45%
 }
-.dropdown-menu {
+body .dropdown-menu {
+  top:15%;
+  left: 65%;
+}
+body .container {
+  height: auto;
+}
+body .reminder-form {
+  width:50%;
 }

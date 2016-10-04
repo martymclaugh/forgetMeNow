@@ -11,7 +11,7 @@
                               <%= form_for @reminder, class: 'reminder-form', url: {action: "create"} do |f| %>
                               <div class="field">
                                 <%= f.label :date %><br />
-                                <%= f.date_field :date, class: 'form-control input-sm' %>
+                                <%= f.date_field :date, class: 'form-control input-sm reminder_date' %>
                               </div><br />
               			    					<div class="form-group">
                                     <div class="field">
@@ -41,4 +41,13 @@
 						</div>
 <%= calendar do |date| %>
   <%= date.day %>
+  <% p @reminders_by_date %>
+  <% p date %>
+  <% if @reminders_by_date[date] %>
+    <ul>
+      <% @reminders_by_date[date].each do |reminder| %>
+      <li><%= reminder.title %></li>
+      <% end %>
+    </ul>
+    <% end %>
 <% end %>

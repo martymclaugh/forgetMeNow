@@ -43,7 +43,7 @@ td {
   color: #777;
   height: 80px;
   vertical-align: top;
-  font-size: 16px;
+  font-size: 1.5vw;
 }
 .notmonth {
   background-color: #DDDDDD;
@@ -78,4 +78,8 @@ body .reminder-form {
 }
 .ui-datepicker td {
   height:0;
+}
+
+.reminder-title {
+  font-size: 1.5vw
 }

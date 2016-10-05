@@ -3,9 +3,6 @@ class RemindersController < ApplicationController
     @reminder = Reminder.new
     @reminders = Reminder.where(user_id: current_user.id)
     @reminders_by_date = @reminders.group_by(&:date)
-    p "*" * 100
-    p @reminders_by_date
-    p "*" * 100
   end
 
   def create

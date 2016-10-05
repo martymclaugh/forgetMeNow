@@ -1,0 +1,51 @@
+<h1>Home#index</h1>
+<p>Find me in app/views/home/index.html.erb</p>
+
+<button class="btn btn-primary new-reminder dropdown-toggle" data-toggle="dropdown">New Text Reminder</button>
+						<div class="dropdown-menu">
+                      	<div class="panel panel-default">
+                      		<div class="panel-heading">
+              			    		<h3 class="panel-title text-center">Reminder</h3>
+              			 			</div>
+              			 			<div class="panel-body">
+                              <%= form_for @reminder, class: 'reminder-form', url: {action: "create"} do |f| %>
+                              <div class="field">
+                                <%= f.label :date %><br />
+                                <%= f.text_field :date, class: 'form-control input-sm reminder_date' %>
+                              </div><br />
+              			    					<div class="form-group">
+                                    <div class="field">
+                                      <%= f.label :text_time %>
+                                      <%= f.time_field :time, autocomplete: "off", class: 'form-control input-sm' %>
+                                    </div>
+              			    			</div>
+                              <div class="form-group">
+                                <div class="field">
+                                  <%= f.label :title %>
+                                  <%= f.text_field :title, autocomplete: "off", class: 'form-control input-sm' %>
+                                </div>
+                            </div>
+                              <div class="form-group">
+                                <div class="field">
+                                  <%= f.label :message %>
+                                  <%= f.text_area :message, autocomplete: "off", class: 'form-control input-sm' %>
+                                </div>
+                          </div>
+                              <div class="actions">
+                                <%= f.submit "Add Reminder", class: 'btn btn-info btn-block'  %><br />
+                              </div>
+                            <% end %>
+              			    	</div>
+                  		</div>
+                  	</div>
+						</div>
+<%= calendar do |date| %>
+  <%= date.day %>
+  <% if @reminders_by_date[date] %>
+    <ul>
+      <% @reminders_by_date[date].each do |reminder| %>
+      <li class="reminder-title"><%= reminder.title %></li>
+      <% end %>
+    </ul>
+    <% end %>
+<% end %>

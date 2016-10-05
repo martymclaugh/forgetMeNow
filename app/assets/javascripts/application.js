@@ -12,10 +12,18 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery-ui/datepicker
 //= require_tree .
 
 $(document).ready(function()
 {
   console.log("ready");
   $("tr:odd").css("background-color", "#F9F9F9");
+});
+
+$(document).ready(function(){
+    //Handles menu drop down
+    $('.dropdown-menu').find('form').click(function (e) {
+        e.stopPropagation();
+    });
 });

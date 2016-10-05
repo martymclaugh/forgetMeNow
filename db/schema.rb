@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(version: 20161004185807) do
   enable_extension "plpgsql"
 
   create_table "reminders", force: :cascade do |t|
-    t.string   "date"
+    t.date     "date"
     t.integer  "user_id"
     t.string   "title"
     t.string   "message"
